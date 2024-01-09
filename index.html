@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href='index.css' />
+  </head>
+<body>
+   <div class="container">
+        <h2> Heart Attack </h2>
+        <div class="form-wrapper">
+            <form action="{{ url_for('predict')}}"method="post">
+                <div class="form-group">
+                    <label for="age"> Age</label>
+                    <input type="text" name="age" id="age" placeholder="in years">
+                </div>
+                <div class="form-group">
+                    <label for="gender" id="gender">Gender</label>
+                    <select>
+                        <option class="transparent" value="0">Female </option>
+                        <option class="transparent" value="1"> Male </option>
+                    </select>
+                </div>  
+                <div class="form-group">
+                    <label for="cp" id="cp">Chest Pain Type </label>
+                    <select>
+                        <option class="transparent" value="0"> Asymptomatic </option>
+                        <option class="transparent" value="1"> Typical Angina </option>
+                        <option class="transparent" value="2"> Atypical Angina </option>
+                        <option class="transparent" value="3"> Non-Anginal </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="trestbps">Resting Blood Pressure</label>
+                    <input type="text" name="trestbps" id="trestbps" placeholder="mm Hg">
+                </div>
+                <div class="form-group">
+                    <label for="trestbps">Serum Cholestoral</label>
+                    <input type="text" name="chol" id="chol" placeholder="mg/dl">
+                </div>
+                <div class="form-group">
+                    <label for="fbs" id="fbs">Fasting Blood Sugar </label>
+                    <select>
+                        <option class="transparent" value="0"> Greater than 120 mg/dl </option>
+                        <option class="transparent" value="1"> Less than equals to 120 mg/dl </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="restecg" id="restecg">Resting Electrocardiographic</label>
+                    <select>
+                        <option class="transparent" value="0">Hypertrophy </option>
+                        <option class="transparent" value="1"> Normal </option>
+                        <option class="transparent" value="2"> Having ST-T wave Abnormality </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="thalachh">Max Heart Rate Acheived</label>
+                    <input type="text" name="thalachh" id="thalachh" placeholder="">
+                </div>  
+                <div class="form-group">
+                    <label for="exang" id="exang">Exercise Induced Angina </label>
+                    <select>
+                        <option class="transparent" value="0">No </option>
+                        <option class="transparent" value="1">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="oldpeak">Old Peak</label>
+                    <input type="text" name="oldpeak" id="oldpeak" placeholder="">
+                </div> 
+
+                <div class="form-group">
+                    <label for="slp" id="slp">Slope of peak exercise ST </label>
+                    <select>
+                        <option class="transparent" value="0"> Downsloping </option>
+                        <option class="transparent" value="1"> Flat </option>
+                        <option class="transparent" value="2"> Upsloping </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="caa" id="caa">number of major vessels (0-3) colored by flourosopy </label>
+                    <select>
+                        <option class="transparent" value="0"> 0  </option>
+                        <option class="transparent" value="1"> 1 </option>
+                        <option class="transparent" value="2"> 2</option>
+                        <option class="transparent" value="3"> 3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="thall" id="thall">Defect Type</label>
+                    <select>
+                        <option class="transparent" value="0"> Reversable defect </option>
+                        <option class="transparent" value="1"> Fixed Defect </option>
+                        <option class="transparent" value="2"> Normal </option>
+                    </select>
+                </div>
+                <button class="button-3" role="button">Predict</button>
+            </form>
+        </div>
+    </div> 
+</body>
+</html>
+
